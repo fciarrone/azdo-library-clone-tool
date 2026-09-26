@@ -23,7 +23,7 @@ The Azure DevOps Library Clone Tool simplifies the process of copying Variable G
 
 ## Prerequisites
 
-- **Node.js 18+** (for local development)
+- **Node.js 26+** (for local development, `24+` minimum — see `.nvmrc`)
 - **Docker & Docker Compose** (for containerized deployment)
 - **Azure DevOps Organization** with projects containing Variable Groups
 - **Personal Access Token (PAT)** with the following scopes:

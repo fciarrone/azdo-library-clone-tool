@@ -1,4 +1,4 @@
-FROM node:18-alpine AS builder
+FROM node:26-alpine AS builder
 WORKDIR /app
 
 COPY backend/package*.json ./backend/
@@ -19,7 +19,7 @@ RUN cd frontend && npm install && npm run build
 
 RUN mkdir -p backend/public && cp -r frontend/dist/* backend/public/
 
-FROM node:18-alpine
+FROM node:26-alpine
 WORKDIR /app
 COPY --from=builder /app/backend ./backend
 EXPOSE 3000
